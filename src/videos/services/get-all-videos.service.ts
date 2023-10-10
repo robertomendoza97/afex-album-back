@@ -1,10 +1,15 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, InternalServerErrorException } from '@nestjs/common';
 import { VideoModel } from '../models/video.model';
 
 @Injectable()
 export class GetAllVideosService {
   async execute() {
-    const videos = await VideoModel.scan().exec();
-    return videos;
+    try {
+      const videos = await VideoModel.scan().exec();
+      return videos;
+    } catch (error) {
+      console.log(error);
+      throw new InternalServerErrorException(error);
+    }
   }
 }

@@ -3,7 +3,9 @@ import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  app.setGlobalPrefix('afex/api');
+  app.setGlobalPrefix('afex/api', {
+    exclude: ['health'],
+  });
   app.enableCors();
 
   await app.listen(process.env.PORT).then(() => {
