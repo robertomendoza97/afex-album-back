@@ -2,72 +2,69 @@
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+# AFEX ALBUM BACK
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Descripción del Proyecto
 
-## Description
+AFEX ALBUM BACK es la parte backend del proyecto AFEX ALBUM, desarrollado en Nest.js. Este proyecto se encarga de proporcionar los servicios necesarios para que el frontend pueda guardar y gestionar videos. Además, se conecta a la API de YouTube para buscar información de videos y devuelve objetos formateados al frontend.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Características Clave
 
-## Installation
+- Tres endpoints: Obtener todos los videos, borrar un video y crear un video.
+- Conexión a la API de YouTube para obtener información de videos.
+- Formateo de datos para su uso en el frontend.
 
-```bash
-$ npm install
-```
+## Tecnologías Utilizadas
 
-## Running the app
+- Nest.js
+- TypeScript
+- API de YouTube
 
-```bash
-# development
-$ npm run start
+## Instalación
 
-# watch mode
-$ npm run start:dev
+A continuación, se detallan los pasos para instalar y ejecutar el proyecto en un entorno local.
 
-# production mode
-$ npm run start:prod
-```
+1. Clona el repositorio de GitHub: `git clone https://github.com/robertomendoza97/afex-album-back.git`
+2. Navega al directorio del proyecto: `cd afex-album-back`
+3. Instala las dependencias: `npm install`
+4. Renombra el archivo `.env.example` a `.env`
+5. Configura las variables de entorno con tus datos de conexion.
+6. Inicia el servidor: `npm start:dev`
 
-## Test
+## Endpoints
 
-```bash
-# unit tests
-$ npm run test
+### 1. Obtener todos los videos
 
-# e2e tests
-$ npm run test:e2e
+- **Ruta:** `afex/api/videos`
+- **Método:** GET
+- **Descripción:** Retorna todos los videos guardados.
 
-# test coverage
-$ npm run test:cov
-```
+### 2. Borrar un video
 
-## Support
+- **Ruta:** `afex/api/videos/:id`
+- **Método:** DELETE
+- **Descripción:** Borra un video por su ID.
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+### 3. Crear un video
 
-## Stay in touch
+- **Ruta:** `afex/api/videos`
+- **Método:** POST
+- **Descripción:** Busca la informacion de un video y lo almacena.
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+## Uso
 
-## License
+Este proyecto se utiliza principalmente como una API para el proyecto frontend "AFEX ALBUM". Proporciona los servicios necesarios para gestionar videos y se conecta a la API de YouTube para obtener información adicional.
 
-Nest is [MIT licensed](LICENSE).
+## Contribución
+
+Si deseas contribuir al proyecto, sigue estos pasos:
+
+1. Haz un fork del repositorio.
+2. Crea una rama para tu contribución: `git checkout -b mi-contribucion`
+3. Realiza tus cambios y haz commit: `git commit -m "Añade nuevas características"`
+4. Sube tus cambios a tu repositorio: `git push origin mi-contribucion`
+5. Crea una solicitud de extracción (pull request) en GitHub.
+
+## Contacto
+
+Para cualquier consulta o pregunta sobre el proyecto, puedes ponerte en contacto con _Roberto mendoza_ a través de *robertoemendozac@gmail.com*.
