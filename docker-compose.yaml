@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  afex-album:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: afex-album-docker
+    container_name: afex-album
+    restart: always
+    ports:
+      - '${PORT}:${PORT}'
+    environment:
+      APY_KEY: ${APY_KEY}
+      SECRET_ACCESS_KEY: ${SECRET_ACCESS_KEY}
+      ACCESS_KEY: ${ACCESS_KEY}
+      AWS_REGION: ${AWS_REGION}
+      YOU_TUBE_API: ${YOU_TUBE_API}
+      PORT: ${PORT}
