@@ -38,7 +38,7 @@ export class VideosService {
   async getVideoFromApi(videoId: string) {
     // try {
     const { data } = await axios.get<YoutubeAPIResponse>(
-      `${process.env.YOU_TUBE_API}?id=${videoId}&key=${process.env.APY_KEY}&part=snippet&part=contentDetails&part=player`,
+      `${process.env.YOU_TUBE_API}?id=${videoId}&key=${process.env.API_KEY}&part=snippet&part=contentDetails&part=player`,
     );
 
     if (data.items.length > 0) {
