@@ -1,5 +1,5 @@
 import { Controller, Post, Param } from '@nestjs/common';
-import { VideosService } from '../services/videos.service';
+import { VideosService } from '../services/create-video.service';
 
 @Controller('videos')
 export class VideosController {
